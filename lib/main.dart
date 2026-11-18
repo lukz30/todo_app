@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(const TodoApp());
 
-/// Modello: l'unica entità dell'app.
 class Task {
   Task({required this.title, this.important = false, this.done = false});
 
@@ -17,6 +16,7 @@ class TodoApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'To-do list',
       theme: ThemeData(colorSchemeSeed: Colors.indigo, useMaterial3: true),
       home: const TaskListScreen(),
